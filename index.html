@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Concect 🧑‍💻</title>
+    <link rel="shortcut icon" href="./github.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="./src/js/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>GITHUB CONNECT</h1>
+        <div class="search">
+            <label class="sr-only" for="search-user">search GitHub User</label>
+            <input type="text" placeholder="GitHub User" id="search-user">
+            <button type="submit" id="button-add">&plus;</button>
+        </div>
+      </header>
+      <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Repositories</th>
+                <th>Followers</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          <td class="user">
+            <img src="https://github.com/otavioxavier.png" alt="Imagem de Otavio Xavier">
+            <a href="https://github.com/otavioxavier" target="_blank">
+              <p>Otavio Xavier</p>
+              <span>otavioxavier</span>
+            </a>
+          </td>
+          <td class="repositories">
+       54
+          </td>
+          <td class="followers">
+  2
+          </td>
+          <td>
+            <button class="remove">&times;</button>
+          </td>
+        </tbody>
+    </div>
+  </body>
+</html>

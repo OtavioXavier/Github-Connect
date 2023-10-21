@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Inter', sans-serif;
+    --text-color: #222;
+
+    --main--color: rgb(77, 230, 77) ;
+    --background-color: rgb(241, 255, 241);
+}
+ 
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--background-color);
+ color: var(--text-color);
+}
+
+body * {
+    font-family:  var(--ff-primary);
+}
+
+#app {
+    max-width: 500px;
+    margin: 0 auto;
+    padding:2rem;
+}
+
+
+
+/* class to screen reader */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    white-space: nowrap;
+    font-size: 2.5rem;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    height: 3rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    border: 1px #cacaca solid;
+    padding-left: 1.5rem;
+}
+
+.search button {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 0 1.5rem 1.5rem 0;
+    transition: filter .3s;
+    background-color: var(--main--color);
+}
+
+.search button:hover {
+    filter: brightness(1.2);
+}
+
+table {
+    width: 100%;
+    margin-top: 3rem;
+    border-collapse:collapse ;
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+table th {
+  background-color: var(--main--color);
+  font-weight: normal;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+table td {
+    padding: 1.5rem;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+.remove {
+   background-color: transparent;
+   border: none;
+   color: rgb(255, 68, 68);
+   font-size: 2rem;
+   font-weight: bold;
+   cursor: pointer;
+}
