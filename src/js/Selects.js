@@ -1,6 +1,6 @@
 import { GithubUser } from "./gitHubUser.js";
 
-export class Selecteds {
+export class Selects {
   constructor(root) {
     this.root = document.querySelector(root);
     this.loadData();
@@ -18,7 +18,7 @@ export class Selecteds {
   async add(username) {
     try {
 
-      const userExist = this.selections.find( selected => selected.login == username)
+      const userExist = this.selections.find( selected => selected.login === username)
 
       if(userExist) {
         throw new Error('user has already been registered')
@@ -49,7 +49,7 @@ export class Selecteds {
   }
 }
 
-export class SelectedsView extends Selecteds {
+export class SelectsView extends Selects {
   constructor(root) {
     super(root);
 
@@ -58,7 +58,7 @@ export class SelectedsView extends Selecteds {
     this.update();
     this.onSearch();
   }
-  //Todas as vezes que eu atualizar qualquer dado eu preciso rodar essa função em seguida
+  
   onSearch() {
     const addButton = this.root.querySelector('.search button')
     addButton.onclick = () => {
@@ -75,7 +75,7 @@ export class SelectedsView extends Selecteds {
       const row = this.createRow();
 
       row.querySelector('.user img').src =` https://github.com/${user.login}.png`;
-      row.querySelector('.user img').alt =` Imagem de ${user.name}`;
+      row.querySelector('.user img').alt =` ${user.name} s image`;
       row.querySelector('.user a').href = `https://github.com/${user.login}`;
       row.querySelector('.user a p').textContent = user.name;
       row.querySelector('.user a span').textContent = user.login;
@@ -91,14 +91,12 @@ export class SelectedsView extends Selecteds {
         }
       }
 
-      // Linha que escreve a row na tela
       this.tbody.append(row)
 
     })
   }
 
   createRow() {
-    //Criando um elemento html usando a DOM
     const tr = document.createElement("tr");
 
     const trContent = `
@@ -119,7 +117,6 @@ export class SelectedsView extends Selecteds {
           <button class="remove">&times;</button>
         </td>
     `;
-    //Adicionando os dados no tr criado pela DOM
     tr.innerHTML = trContent;
 
     return tr;

@@ -1,4 +1,3 @@
-import { SelectedsView } from "./Selecteds.js";
+import { SelectsView as SelectsView } from "./Selects.js";
 
-//Passando o app como root
-new SelectedsView('#app')
+new SelectsView('#app')
